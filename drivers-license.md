@@ -8,5 +8,6 @@ Driver's License: Legal age to apply for license is 17. Write a program to do th
 2. If applicant's age is 17 or greater, add one to an ACCEPTED counter
 3. If applicant's age is less than 17, add one to a REJECTED counter
 4. Increment the number of REJECTED counter on the outbox
+5. The program will accept applicants until zero is entered
 
-The program will accept applicants until zero is entered
+Click [drivers-license.lmc](drivers-license.lmc) for the solution.
