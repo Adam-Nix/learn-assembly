@@ -7,13 +7,15 @@ lbMultiplyLoop  LDA varProduct
                 STA varProduct 
                 LDA varMultiplier
                 SUB valOne
-                STA varMultiplier 
+                STA varMultiplier
+                BRZ lbOutput
                 BRP lbMultiplyLoop
-                LDA varProduct
+
+lbOutput        LDA varProduct
                 OUT
                 HLT
 
-vaOne           DAT 1
+valOne          DAT 1
 varProduct      DAT 0
 varMultiplicand DAT 0
 varMultiplier   DAT 0
