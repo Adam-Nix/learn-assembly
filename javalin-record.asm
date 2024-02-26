@@ -3,24 +3,24 @@
 // If an attempt is greater than the current record,the attempt should be stored 
 // as the new record. Enter 0 to end and output the current record.
 ///
-lbUserInput			INP
+lbUserInput         INP
                     BRZ lbProgramEnd
                     BRP lbTest
                     BRA lbUserInput
 
-llbTest				STA varAttempt
+llbTest             STA varAttempt
                     SUB varCurrentRecord
                     
                     BRZ lbUserInput
                     BRP lbNewRecord
                     BRA lbUserInput
 
-lbNewRecord			LDA varAttempt
+lbNewRecord         LDA varAttempt
                     STA varCurrentRecord
                     OUT
                     BRA lbUserInput
 
-lbProgramEnd		HLT
+lbProgramEnd        HLT
 
-varCurrentRecord	DAT 98
-varAttempt			DAT 0
+varCurrentRecord    DAT 98
+varAttempt          DAT 0
