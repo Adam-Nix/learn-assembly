@@ -1,11 +1,11 @@
                 INP 
-                STO varNumber1
+                STA varNumber1
                 INP 
-                STO varNumber2
+                STA varNumber2
                 SUB varNumber1
                 BRP lbPrintTwo
         
-lbToPositive      LDA varNumber1
+lbToPositive    LDA varNumber1
                 BRA lbExit
 
 lbPrintTwo      LDA varNumber2

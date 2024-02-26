@@ -1,4 +1,8 @@
 {
     "cSpell.words": [
+    ],
+    "cSpell.enableFiletypes": [
+        "asm-list-file",
+        "asm-list-markdown-codeblock"
     ]
 }

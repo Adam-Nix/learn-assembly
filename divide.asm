@@ -6,15 +6,17 @@
                 BRZ lbExit
                 STA varDivisor
 
-lbDivideLoop LDA varQuotient
-               ADD varDividend 
-               STA varQuotient 
+lbDivideLoop    BRZ lbExit   
+                LDA varDividend
+                SUB varDivisor
+                STA varDividend
+                BRP lbIncrement
+                BRA lbExit
 
-               LDA varDivisor
-               SUB val1
-               STA varDivisor
-               BRZ lbExit
-               BRP lbDivideLoop
+lbIncrement    LDA varQuotient
+               ADD val1
+               STA varQuotient
+               BRA lbDivideLoop
 
 lbExit         LDA varQuotient
                OUT 
